@@ -1,15 +1,14 @@
 import telebot
-import os
 from telebot.types import ChatMemberUpdated
 
-API_TOKEN  = os.environ.get("BOT_TOKEN")
+API_TOKEN  = "8730756644:AAHdHnhibA6FTebmdpi-IzdVWuH9CpgD3Ro"
 CHANNEL_ID = -1003422607901
 
 bot = telebot.TeleBot(API_TOKEN)
 
-user_links      = {}  # user_id -> invite_link
-link_owners     = {}  # invite_link -> user_id
-referral_counts = {}  # user_id -> count
+user_links      = {}
+link_owners     = {}
+referral_counts = {}
 
 
 @bot.message_handler(commands=["start"])
@@ -84,7 +83,7 @@ def handle_new_member(update: ChatMemberUpdated):
 
         bot.send_message(
             referrer_id,
-            f"Someone joined using your link!\n"
+            f"🎉 Someone joined using your link!\n"
             f"Your new score: {count}"
         )
 
