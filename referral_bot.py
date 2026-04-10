@@ -1,7 +1,8 @@
 import telebot
+import os
 from telebot.types import ChatMemberUpdated
 
-API_TOKEN  = "8730756644:AAHdHnhibA6FTebmdpi-IzdVWuH9CpgD3Ro"
+API_TOKEN  = os.environ.get("BOT_TOKEN")
 CHANNEL_ID = -1003422607901
 
 bot = telebot.TeleBot(API_TOKEN)
