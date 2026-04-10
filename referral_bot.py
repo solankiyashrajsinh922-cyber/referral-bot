@@ -15,7 +15,7 @@ referral_counts = {}  # user_id -> count
 def start(message):
     bot.reply_to(
         message,
-        "Welcome to the Referral Bot! 🚀\n\n"
+        "Welcome to the Yash X Prime Referral Bot! 🚀\n\n"
         "Invite people and earn rewards!\n\n"
         "👉 /mylink - Get your unique invite link\n"
         "👉 /stats - Check your score"
